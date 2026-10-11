@@ -1,0 +1,55 @@
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SensorManager"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:id="@+id/sensorStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Checking sensor..."
+            android:textSize="18sp"
+            android:layout_marginBottom="32dp"/>
+
+        <TextView
+            android:id="@+id/xValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X: 0.00 m/s²"
+            android:textSize="24sp"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:id="@+id/yValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Y: 0.00 m/s²"
+            android:textSize="24sp"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:id="@+id/zValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Z: 0.00 m/s²"
+            android:textSize="24sp"/>
+
+    </LinearLayout>
+</ScrollView>
