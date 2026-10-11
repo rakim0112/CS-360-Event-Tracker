@@ -33,4 +33,4 @@ The direct-SMS feature is for the class assignment. A production version would n
 
 ## Development note
 
-ChatGPT assisted with parts of the Java code, interface planning, and launch-plan draft. I reviewed and tested the app in Android Studio and on a test device.
+No assistance
