@@ -30,7 +30,3 @@ On my Pixel 6, I was able to register/sign in, add and delete events, view the e
 I couldn't complete the end-to-end SMS test because the emulator became too slow and stopped responding. **SMS delivery is not verified.** See [TESTING.md](TESTING.md) for the test notes.
 
 The direct-SMS feature is for the class assignment. A production version would need to account for Google Play's restrictions on SMS permissions.
-
-## Development note
-
-No assistance
