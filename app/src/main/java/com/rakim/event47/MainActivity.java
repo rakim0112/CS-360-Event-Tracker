@@ -24,17 +24,13 @@ import android.text.InputType;
 import android.text.TextWatcher;
 import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.GridLayout;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.TimePicker;
 import android.widget.Toast;
 
 import java.text.DateFormat;
@@ -329,10 +325,18 @@ public final class MainActivity extends Activity {
                         == PackageManager.PERMISSION_GRANTED ? "Granted. The app can send opted-in reminders when you explicitly check them."
                         : "Not granted. Your event management still works. You can opt into SMS in an event editor.")
                 .setPositiveButton("OK", null).show());
+        TextView manageSmsPermission = action("MANAGE SMS PERMISSION", false);
+        add(page, manageSmsPermission, -1, 14);
+        manageSmsPermission.setOnClickListener(v -> {
+            Intent settings = new Intent(android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
+                    android.net.Uri.parse("package:" + getPackageName()));
+            startActivity(settings);
+        });
         TextView signout = action("SIGN OUT", true);
         add(page, signout, -1, 0);
         signout.setOnClickListener(v -> {
             currentUserId = -1;
+            currentUsername = "";
             showAuthentication(false);
         });
     }
