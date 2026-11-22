@@ -478,11 +478,11 @@ public final class MainActivity extends Activity {
         save.setOnClickListener(v -> {
             String name = title.getText().toString().trim();
             String destination = phone.getText().toString().trim();
-            if (name.isEmpty()) {
+            if (!EventValidator.hasTitle(name)) {
                 title.setError("An event needs a title");
                 return;
             }
-            if (sms.isChecked() && destination.replaceAll("[^0-9+]", "").length() < 4) {
+            if (!EventValidator.hasReminderDestination(sms.isChecked(), destination)) {
                 phone.setError("Enter an SMS destination (emulator test numbers are supported)");
                 return;
             }
